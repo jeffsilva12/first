@@ -1,0 +1,44 @@
+*{margin: 0; padding: 0;}
+
+body{
+  background-color: rgba(47, 101, 218, 0.993);
+  color: rgb(240, 240, 240);
+}
+
+.row{
+  margin: 0 auto;
+}
+
+.resultado_certo{
+  background-color: green;
+  padding: 5px;
+  color: #fff;
+
+}
+.resultado_errado{
+  background-color: red;
+  color: #fff;
+  padding: 5px;
+}
+
+div{
+  font-size: x-large;
+}
+
+#q{
+  color: rgba(250, 233, 3, 0.973);
+  font-style: oblique;
+}
+
+h1{
+ 
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style:oblique;
+  color: rgb(211, 226, 4);
+}
+
+#v{
+  font-size: large;
+  color: rgb(31, 29, 29);
+  background-color: rgb(255, 255, 255);
+}

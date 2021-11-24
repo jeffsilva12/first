@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Questions Game</title>
+  
+
+  <link rel="stylesheet" href="jogo1.css">
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="jogo1.js"></script>
+
+</head>
+
+<body>
+  <div class="container">	
+    <div class="row">
+  	  <div class="question">
+        <form method="POST" id="answer">
+          <h1>Geo Quiz</h1> 
+          <br> <h2>Vamos testar seu nível de geografia?</h2>
+
+          <br><div id="q">Questão 1 <br> <br> Qual é a capital da Grécia?</div> <br>
+
+          <p>
+            <input type="radio" name="resposta" id="a" value="a" data-resultado="true">
+            <label for="a">A) Atenas</label>
+          </p>
+          
+          <p>
+            <input type="radio" name="resposta" id="b" value="b">
+            <label for="b">B) Berlim</label>
+          </p>
+
+          <p>
+            <input type="radio" name="resposta" id="c" value="c">
+            <label for="c">C) Praga</label>
+          </p>
+
+          <p>
+            <input type="radio" name="resposta" id="d" value="d">
+            <label for="d">D) Moscou</label>
+          </p>
+
+          <input id="v" type="submit" name="validar" value="Validar">
+        </form>
+
+          <form method="POST" id="answer2">
+
+          <br><div id="q">Questão 2 <br> <br> Qual é a capital do Egito?</div> <br>
+
+          <p>
+            <input type="radio" name="resposta" id="a2" value="a2" >
+            <label for="a2">A) Bagdá</label>
+          </p>
+          
+          <p>
+            <input type="radio" name="resposta" id="b2" value="b2">
+            <label for="b2">B) Cabul</label>
+          </p>
+
+          <p>
+            <input type="radio" name="resposta" id="c2" value="c2" data-resultado="true">
+            <label for="c2">C) Cairo</label>
+          </p>
+
+          <p>
+            <input type="radio" name="resposta" id="d2" value="d2">
+            <label for="d2">D) Saara</label>
+          </p>
+
+          
+          <input id="v" type="submit" name="validar" value="Validar">
+        </form>
+
+         <form method="POST" id="answer3">
+          <br><div id="q">Questão 3 <br> <br> Qual é a capital dos Estados Unidos?</div> <br>
+
+          <p>
+            <input type="radio" name="resposta" id="a3" value="a3" >
+            <label for="a3">A) Georgetown</label>
+          </p>
+          
+          <p>
+            <input type="radio" name="resposta" id="b3" value="b3">
+            <label for="b3">B) California</label>
+          </p>
+
+          <p>
+            <input type="radio" name="resposta" id="c3" value="c3" >
+            <label for="c3">C) Boston</label>
+          </p>
+
+          <p>
+            <input type="radio" name="resposta" id="d3" value="d3" data-resultado="true">
+            <label for="d3">D) Washington</label>
+          </p>
+
+          <input id="v" type="submit" name="validar" value="Validar">
+  	  	</form>
+
+  	  </div>
+  	</div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
