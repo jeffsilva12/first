@@ -38,10 +38,10 @@ cd seu-repositorio
    cp .env.example .env
    ```
 
-3. Suba os containers:
+3. Configure o arquivo .env alterando a versão do PHP para 8.3:
 
    ```bash
-   docker-compose up -d nginx mysql
+   PHP_version=8.3
    ```
 
 4. Configure o arquivo de **hosts**:
@@ -53,13 +53,73 @@ cd seu-repositorio
    * Adicione:
 
      ```
-     127.0.0.1   back-end
+     127.0.0.1   movie-catalog
      ```
 
-5. Instale as dependências do Laravel:
+5. Crie o arquivo movie-catalog.conf dentro do diretório laradock/nginx/sites da seguinte forma:
+
+  ```bash
+   #server {
+      #    listen 80;
+      #    server_name laravel.com.co;
+      #    return 301 https://laravel.com.co$request_uri;
+      #}
+      
+      server {
+      
+          listen 80;
+          listen [::]:80;
+      
+          # For https
+          # listen 443 ssl;
+          # listen [::]:443 ssl ipv6only=on;
+          # ssl_certificate /etc/nginx/ssl/default.crt;
+          # ssl_certificate_key /etc/nginx/ssl/default.key;
+      
+          server_name movie-catalog;
+          root /var/www/movie-catalog/back-end/public;
+          index index.php index.html index.htm;
+      
+          location / {
+               try_files $uri $uri/ /index.php$is_args$args;
+          }
+      
+          location ~ \.php$ {
+              try_files $uri /index.php =404;
+              fastcgi_pass php-upstream;
+              fastcgi_index index.php;
+              fastcgi_buffers 16 16k;
+              fastcgi_buffer_size 32k;
+              fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+              #fixes timeouts
+              fastcgi_read_timeout 600;
+              include fastcgi_params;
+          }
+      
+          location ~ /\.ht {
+              deny all;
+          }
+      
+          location /.well-known/acme-challenge/ {
+              root /var/www/letsencrypt/;
+              log_not_found off;
+          }
+      
+          error_log /var/log/nginx/laravel_error.log;
+          access_log /var/log/nginx/laravel_access.log;
+      }
+  ```
+     
+6. Suba os containers:
 
    ```bash
-   docker-compose exec workspace bash
+   docker-compose up -d nginx mysql
+   ```
+
+7. Instale as dependências do Laravel:
+
+   ```bash
+   docker-compose exec workspace laradock
    composer install
    php artisan key:generate
    php artisan migrate
@@ -121,25 +181,14 @@ Datas de lançamento dos filmes são exibidas no formato **brasileiro (DD/MM/YYY
 
 ---
 
-## 📸 Prints (opcional)
+## 📸 Prints 
 
 Se quiser incluir imagens de demonstração no README:
 
-* Salve os prints na pasta `docs/images/`
-* Inclua no README:
 
-```markdown
-![Tela de busca](docs/images/busca.png)
-![Lista de favoritos](docs/images/favoritos.png)
-```
-
----
 
 ## 👨‍💻 Autor
 
 Desenvolvido por **Jeff** 🚀
 
-```
 
-Quer que eu também já adicione um **exemplo de `.env` do Laravel** e do **Vue** direto nesse README, para facilitar ainda mais a configuração?
-```
