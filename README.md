@@ -20,7 +20,7 @@ O objetivo é permitir que o usuário busque filmes pelo nome, adicione aos favo
 
 ### 1. Clonar o repositório
 ```bash
-git clone https://github.com/SEU-USUARIO/seu-repositorio.git
+git clone https://github.com/jeffsilva12/movie-catalog.git
 cd seu-repositorio
 ````
 
