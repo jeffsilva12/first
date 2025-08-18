@@ -116,7 +116,16 @@ cd movie-catalog
    docker-compose up -d nginx mysql
    ```
 
-7. Instale as dependências do Laravel:
+7. Crie o Banco de dados e também crie e ajuste o .env do projeto dentro de /back-end conforme o banco de dados definido. Ex:
+
+   DB_CONNECTION=mysql
+   DB_HOST=mysql
+   DB_PORT=3306
+   DB_DATABASE=movie-catalog
+   DB_USERNAME=user
+   DB_PASSWORD=secret 
+
+8. Instale as dependências do Laravel:
 
    ```bash
    docker-compose exec workspace laradock
@@ -126,7 +135,7 @@ cd movie-catalog
    ```
 
 O backend estará disponível em:
-👉 [http://back-end](http://back-end)
+👉 [http://back-end](http://movie-catalog)
 
 ---
 
@@ -147,7 +156,7 @@ O backend estará disponível em:
 3. Configure o arquivo `.env` do frontend para apontar para o backend:
 
    ```env
-   VITE_API_URL=http://back-end/api
+   VITE_API_URL=http://movie-catalog/api
    ```
 
 4. Rode o servidor de desenvolvimento:
