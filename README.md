@@ -1,6 +1,5 @@
 
 
-````markdown
 # 🎬 Projeto Catálogo de Filmes
 
 Este é um projeto full-stack que integra **Laravel (com Laradock)** no back-end e **Vue.js** no front-end.  
