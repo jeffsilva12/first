@@ -135,7 +135,7 @@ cd movie-catalog
    ```
 
 O backend estará disponível em:
-👉 [http://back-end](http://movie-catalog)
+👉 [http://movie-catalog](http://movie-catalog)
 
 ---
 
@@ -184,7 +184,7 @@ Datas de lançamento dos filmes são exibidas no formato **brasileiro (DD/MM/YYY
 ## ▶️ Como Rodar o Projeto
 
 1. Subir containers do backend (Laradock + Laravel)
-2. Configurar hosts para o domínio `back-end`
+2. Configurar hosts para o domínio `movie-catalog`
 3. Rodar o frontend com Vue.js
 4. Acessar a aplicação pelo navegador
 
