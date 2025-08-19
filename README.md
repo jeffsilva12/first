@@ -183,10 +183,6 @@ O backend estará disponível em:
 
 ---
 
-## 📸 Prints 
-
-Se quiser incluir imagens de demonstração no README:
-
 
 
 ## 👨‍💻 Autor
