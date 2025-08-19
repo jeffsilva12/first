@@ -165,19 +165,12 @@ O backend estará disponível em:
    npm run dev
    ```
 
-O frontend estará disponível em:
-👉 [http://localhost:5173](http://localhost:5173)
-
----
-
 ## 🎯 Funcionalidades
 
 * 🔍 **Buscar filmes** pelo nome
 * ⭐ **Adicionar filmes aos favoritos**
 * 📋 **Listar filmes favoritos**
 * ❌ **Remover filmes favoritos**
-
-Datas de lançamento dos filmes são exibidas no formato **brasileiro (DD/MM/YYYY)**.
 
 ---
 
